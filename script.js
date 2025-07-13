@@ -166,6 +166,32 @@
       }
   }
   
-  // Start the typing effect when the page loads
+  
   window.onload = typeEffect;
     
+document.addEventListener('DOMContentLoaded', function() {
+    const burger = document.querySelector('.burger');
+    const navLinks = document.querySelector('.nav-links');
+    
+    burger.addEventListener('click', function() {
+        
+        navLinks.classList.toggle('active');
+        burger.classList.toggle('active');
+        
+       
+        if (navLinks.classList.contains('active')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
+    });
+    
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', function() {
+            navLinks.classList.remove('active');
+            burger.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+    });
+});

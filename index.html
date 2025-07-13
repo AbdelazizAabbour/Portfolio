@@ -2,59 +2,355 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Abdelaziz Aabbour</title>
-    <link rel="stylesheet" href="./styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Abdelaziz Aabbour</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 
 <body>
-    <div class="particles" id="particles"></div>
+  <div class="particles" id="particles"></div>
 
-    <nav id="navbar">
-        <div class="nav-container">
-            <a href="#" class="logo">{ Aziz Abour }</a>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#lab">contact </a></li>
-                <li><a href="#projects">Projects</a></li>
-            </ul>
-            <div class="burger">
-                <div class="line"></div>
-                <div class="line"></div>
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">{ Aziz Abour }</a>
+      <ul class="nav-links">
+        <li><a href="#home">About</a></li>
+        <li><a href="#Skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">contact </a></li>
+      </ul>
+      <div class="burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+  </nav>
+
+
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="hero-image">
+        <div class="profile-container">
+          <div class="profile-glow"></div>
+          <div class="profile-image">
+            <img src="./pic/aziz.png" alt="Ibrahim Memuri"
+              style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-text">
+        <p class="greeting">Hello! I Am Abdelaziz Aabbour</p><br>
+        <h1 class="title" id="typing-text"></h1><br>
+
+
+
+        <p class="subtitle">Currently, I'm a Web Developer passionate about creating innovative solutions.</p>
+        <p class="description">
+          A dedicated developer with expertise in both front-end and back-end technologies.
+          I create efficient, scalable applications and enjoy turning complex problems
+          into simple, beautiful solutions.
+          <iframe src="cv.html" width="100%" height="500px" style="border: none;"></iframe>
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+  <h1 class="skills-title" style="text-align: center; color: white;">My Technical Skills</h1>
+
+  <section id="Skills">
+    <div class="container" style="background-color: #000;">
+      <div class="skill-box">
+        <span class="title">Php</span>
+
+        <div class="skill-bar">
+          <span class="skill-per html">
+            <span class="tooltip">80%</span>
+          </span>
+        </div>
+      </div>
+
+      <div class="skill-box">
+        <span class="title">javascript</span>
+
+        <div class="skill-bar">
+          <span class="skill-per css">
+            <span class="tooltip">30%</span>
+          </span>
+        </div>
+      </div>
+      <div class="skill-box">
+        <span class="title">sql</span>
+
+        <div class="skill-bar">
+          <span class="skill-per javascript">
+            <span class="tooltip">40%</span>
+          </span>
+        </div>
+      </div>
+      <div class="skill-box">
+        <span class="title">html / css</span>
+
+        <div class="skill-bar">
+          <span class="skill-per nodejs">
+            <span class="tooltip">60%</span>
+          </span>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="card-3d">
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP">
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+          alt="JavaScript">
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" alt="MySQL">
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap">
+      </div>
+
+    </div>
+
+    <style>
+      @keyframes autoRun3d {
+        from {
+          transform: perspective(1200px) rotateY(-360deg);
+        }
+
+        to {
+          transform: perspective(1200px) rotateY(0deg);
+        }
+      }
+
+      @keyframes animateBrightness {
+        10% {
+          filter: brightness(1.2);
+        }
+
+        50% {
+          filter: brightness(0.3);
+        }
+
+        90% {
+          filter: brightness(1.2);
+        }
+      }
+
+      .card-3d {
+        position: relative;
+        width: 700px;
+        height: 300px;
+        transform-style: preserve-3d;
+        transform: perspective(1200px);
+        animation: autoRun3d 25s linear infinite;
+        will-change: transform;
+        margin: 100px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .card-3d div {
+        position: absolute;
+        width: 120px;
+        height: 168px;
+        background-color: rgba(255, 255, 255, 0.9);
+        border: solid 3px #ffd700;
+        border-radius: 1rem;
+        top: 50%;
+        left: 50%;
+        transform-origin: center center;
+        animation: animateBrightness 25s linear infinite;
+        transition-duration: 300ms;
+        will-change: transform, filter;
+        box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+        backdrop-filter: blur(5px);
+      }
+
+      .card-3d:hover {
+        animation-play-state: paused !important;
+        transform: scale(1.05);
+      }
+
+      .card-3d:hover div {
+        animation-play-state: paused !important;
+        border-color: #ffa500;
+        box-shadow: 0 0 20px rgba(255, 165, 0, 0.5);
+      }
+
+      .card-3d div:nth-child(1) {
+        transform: translate(-50%, -50%) rotateY(0deg) translateZ(200px);
+        animation-delay: -0s;
+      }
+
+      .card-3d div:nth-child(2) {
+        transform: translate(-50%, -50%) rotateY(36deg) translateZ(200px);
+        animation-delay: -2.5s;
+      }
+
+      .card-3d div:nth-child(3) {
+        transform: translate(-50%, -50%) rotateY(72deg) translateZ(200px);
+        animation-delay: -5s;
+      }
+
+      .card-3d div:nth-child(4) {
+        transform: translate(-50%, -50%) rotateY(108deg) translateZ(200px);
+        animation-delay: -7.5s;
+      }
+
+      .card-3d div:nth-child(5) {
+        transform: translate(-50%, -50%) rotateY(144deg) translateZ(200px);
+        animation-delay: -10s;
+      }
+
+      .card-3d div:nth-child(6) {
+        transform: translate(-50%, -50%) rotateY(180deg) translateZ(200px);
+        animation-delay: -12.5s;
+      }
+
+      .card-3d div:nth-child(7) {
+        transform: translate(-50%, -50%) rotateY(216deg) translateZ(200px);
+        animation-delay: -15s;
+      }
+
+      .card-3d div:nth-child(8) {
+        transform: translate(-50%, -50%) rotateY(252deg) translateZ(200px);
+        animation-delay: -17.5s;
+      }
+
+      .card-3d div:nth-child(9) {
+        transform: translate(-50%, -50%) rotateY(288deg) translateZ(200px);
+        animation-delay: -20s;
+      }
+
+      .card-3d div:nth-child(10) {
+        transform: translate(-50%, -50%) rotateY(324deg) translateZ(200px);
+        animation-delay: -22.5s;
+      }
+
+      .card-3d div img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        padding: 15px;
+        transition: transform 0.3s ease;
+      }
+
+      .card-3d div::before {
+        content: attr(data-tooltip);
+        position: absolute;
+        bottom: -40px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 14px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        white-space: nowrap;
+        pointer-events: none;
+      }
+
+      .card-3d div:hover::before {
+        opacity: 1;
+      }
+
+      .card-3d div:hover img {
+        transform: scale(1.1);
+      }
+
+      .card-3d div:hover {
+        background-color: rgba(255, 255, 255, 0.95);
+        border-color: #ffd700;
+        box-shadow: 0 0 25px rgba(255, 215, 0, 0.5);
+      }
+
+      @media (max-width: 768px) {
+        .card-3d {
+          width: 100%;
+          height: 200px;
+        }
+
+        .card-3d div {
+          width: 80px;
+          height: 112px;
+        }
+      }
+    </style>
+
+
+  </section>
+
+
+
+  <!-- <div class="card">
+                <img src="./pic/creolab.png" alt="Project 1"><br>
+                
+            </div> -->
+
+
+  <section id="projects">
+    <div class="container content2">
+      <div class="row">
+        <h1 class="skills-title" style="text-align: center; color: white;">My Projects</h1>
+
+        <div class="col-md">
+
+          <div class="card">
+            <p class="card-title">CreoLab-Web</p>
+            <p class="small-desc">
+
+              CreoLab is an innovative startup specializing in the creation of customized digital solutions.
+              We develop professional websites, web applications, and e-commerce solutions tailored to our clients'
+              needs. Our technical expertise and creative approach allow us to deliver high-quality projects that meet
+              modern
+              web standards.
+            </p>
+            <div class="go-corner">
+              <div class="go-arrow">→</div>
             </div>
-    </nav>
-
-    <section class="hero" id="home" style="margin-top: 100px;">
-        <div class="hero-content">
-            <div class="hero-image" style="margin-bottom: 400px;">
-                <div class="profile-container">
-                    <div class="profile-glow"></div>
-                    <div class="profile-image">
-                        <img src="./pic/aziz.png" alt="Ibrahim Memuri"
-                            style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
-                    </div>
-                </div>
-            </div>
-
-            <div class="hero-text">
-                <p class="greeting">Hello! I Am Abdelaziz Aabbour</p><br>
-                <h1 class="title" id="typing-text">I'm a Full Stack Developer ..</h1><br>
-
-
-                <p class="subtitle">Currently, I'm a Web Developer passionate about creating innovative solutions.</p>
-                <p class="description">
-                    A dedicated developer with expertise in both front-end and back-end technologies.
-                    I create efficient, scalable applications and enjoy turning complex problems
-                    into simple, beautiful solutions.
-                    <iframe src="cv.html" width="100%" height="500px" style="border: none;"></iframe>
-                </p>
-
-            </div>
+          </div>
 
         </div>
-    </section>
 
 
 
@@ -65,7 +361,476 @@
 
 
 
-    <script src="./script.js"></script>
+
+
+
+
+
+
+
+
+        <div class="col-md">
+
+          <div class="card">
+            <p class="card-title">CreoLab-Web</p>
+            <p class="small-desc">
+
+              CreoLab is an innovative startup specializing in the creation of customized digital solutions.
+              We develop professional websites, web applications, and e-commerce solutions tailored to our clients'
+              needs. Our technical expertise and creative approach allow us to deliver high-quality projects that meet
+              modern
+              web standards.
+            </p>
+            <div class="go-corner">
+              <div class="go-arrow">→</div>
+            </div>
+          </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="col-md">
+
+          <div class="card">
+            <p class="card-title">CreoLab-Web</p>
+            <p class="small-desc">
+
+              CreoLab is an innovative startup specializing in the creation of customized digital solutions.
+              We develop professional websites, web applications, and e-commerce solutions tailored to our clients'
+              needs. Our technical expertise and creative approach allow us to deliver high-quality projects that meet
+              modern
+              web standards.
+            </p>
+            <div class="go-corner">
+              <div class="go-arrow">→</div>
+            </div>
+          </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="col-md">
+
+          <div class="card">
+            <p class="card-title">CreoLab-Web</p>
+            <p class="small-desc">
+
+              CreoLab is an innovative startup specializing in the creation of customized digital solutions.
+              We develop professional websites, web applications, and e-commerce solutions tailored to our clients'
+              needs. Our technical expertise and creative approach allow us to deliver high-quality projects that meet
+              modern
+              web standards.
+            </p>
+            <div class="go-corner">
+              <div class="go-arrow">→</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <style>
+      #projects .content2 {
+        background-color: transparent;
+      }
+
+      .card-title {
+        color: #262626;
+        font-size: 1.5em;
+        line-height: normal;
+        font-weight: 700;
+        margin-bottom: 0.5em;
+      }
+
+      .small-desc {
+        font-size: 1em;
+        font-weight: 400;
+        line-height: 1.5em;
+        color: #452c2c;
+      }
+
+      .small-desc {
+        font-size: 1em;
+      }
+
+      .go-corner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        width: 2em;
+        height: 2em;
+        overflow: hidden;
+        top: 0;
+        right: 0;
+        background: linear-gradient(135deg, #bea307, #5b4d00);
+        border-radius: 0 4px 0 32px;
+      }
+
+      .go-arrow {
+        margin-top: -4px;
+        margin-right: -4px;
+        color: white;
+        font-family: courier, sans;
+      }
+
+      .card {
+        display: block;
+        position: relative;
+        max-width: 300px;
+        max-height: 320px;
+        background-color: #f2f8f9;
+        border-radius: 10px;
+        padding: 2em 1.2em;
+        margin: 12px;
+        text-decoration: none;
+        z-index: 0;
+        overflow: hidden;
+        background: linear-gradient(to bottom, #f3e17a, #ecdb78);
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .card:before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: -16px;
+        right: -16px;
+        background: linear-gradient(135deg, #bea307, #5b4d00);
+        height: 32px;
+        width: 32px;
+        border-radius: 32px;
+        transform: scale(1);
+        transform-origin: 50% 50%;
+        transition: transform 0.35s ease-out;
+      }
+
+      .card:hover:before {
+        transform: scale(28);
+      }
+
+      .card:hover .small-desc {
+        transition: all 0.5s ease-out;
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      .card:hover .card-title {
+        transition: all 0.5s ease-out;
+        color: #ffffff;
+      }
+    </style>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="cotainer">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="skills-title" style="text-align: center; color: white;">Contact Us </h1>
+      </div>
+    </div>
+  </div>
+
+  <section id="contact">
+
+    <div class="login-box">
+      <h1 class="skills-title" style="text-align: center; color: #ffd700;">Send Message </h1>
+
+      <form>
+        <div class="user-box">
+          <input required="" name="" type="text">
+          <label>Name</label>
+        </div>
+        <div class="user-box">
+          <input required="" name="" type="text">
+          <label>Email</label>
+        </div>
+        <div class="user-box">
+          <input required="" name="" type="Message">
+          <label>Message</label>
+        </div>
+        <a href="#">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Send
+        </a>
+      </form>
+      <p>Message sent successfully! <a href="" class="a2">Send another message</a></p>
+    </div>
+
+
+
+    <style>
+      #contact {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 0;
+      }
+
+      .login-box {
+        position: relative;
+        width: 900px;
+        padding: 40px;
+        background: rgba(0, 0, 0, .9);
+        box-sizing: border-box;
+        box-shadow: 0 15px 25px rgba(218, 165, 32, 0.4);
+        border-radius: 10px;
+      }
+
+      .login-box p:first-child {
+        margin: 0 0 30px;
+        padding: 0;
+        color: #ffd700;
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: bold;
+        letter-spacing: 1px;
+      }
+
+      .login-box .user-box {
+        position: relative;
+      }
+
+      .login-box .user-box input {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 16px;
+        color: #ffd700;
+        margin-bottom: 30px;
+        border: none;
+        border-bottom: 1px solid #daa520;
+        outline: none;
+        background: transparent;
+      }
+
+      .login-box .user-box label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 10px 0;
+        font-size: 16px;
+        color: #daa520;
+        pointer-events: none;
+        transition: .5s;
+      }
+
+      .login-box .user-box input:focus~label,
+      .login-box .user-box input:valid~label {
+        top: -20px;
+        left: 0;
+        color: #ffd700;
+        font-size: 12px;
+      }
+
+      .login-box form a {
+        position: relative;
+        display: inline-block;
+        padding: 10px 20px;
+        font-weight: bold;
+        color: #ffd700;
+        font-size: 16px;
+        text-decoration: none;
+        text-transform: uppercase;
+        overflow: hidden;
+        transition: .5s;
+        margin-top: 40px;
+        letter-spacing: 3px
+      }
+
+      .login-box a:hover {
+        background: #daa520;
+        color: #000;
+        border-radius: 5px;
+      }
+
+      .login-box a span {
+        position: absolute;
+        display: block;
+      }
+
+      .login-box a span:nth-child(1) {
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, #ffd700);
+        animation: btn-anim1 1.5s linear infinite;
+      }
+
+      @keyframes btn-anim1 {
+        0% {
+          left: -100%;
+        }
+
+        50%,
+        100% {
+          left: 100%;
+        }
+      }
+
+      .login-box a span:nth-child(2) {
+        top: -100%;
+        right: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(180deg, transparent, #daa520);
+        animation: btn-anim2 1.5s linear infinite;
+        animation-delay: .375s
+      }
+
+      @keyframes btn-anim2 {
+        0% {
+          top: -100%;
+        }
+
+        50%,
+        100% {
+          top: 100%;
+        }
+      }
+
+      .login-box a span:nth-child(3) {
+        bottom: 0;
+        right: -100%;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(270deg, transparent, #b8860b);
+        animation: btn-anim3 1.5s linear infinite;
+        animation-delay: .75s
+      }
+
+      @keyframes btn-anim3 {
+        0% {
+          right: -100%;
+        }
+
+        50%,
+        100% {
+          right: 100%;
+        }
+      }
+
+      .login-box a span:nth-child(4) {
+        bottom: -100%;
+        left: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(360deg, transparent, #8b6914);
+        animation: btn-anim4 1.5s linear infinite;
+        animation-delay: 1.125s
+      }
+
+      @keyframes btn-anim4 {
+        0% {
+          bottom: -100%;
+        }
+
+        50%,
+        100% {
+          bottom: 100%;
+        }
+      }
+
+      .login-box p:last-child {
+        color: #daa520;
+        font-size: 14px;
+      }
+
+      .login-box a.a2 {
+        color: #ffd700;
+        text-decoration: none;
+      }
+
+      .login-box a.a2:hover {
+        background: transparent;
+        color: #daa520;
+        border-radius: 5px;
+      }
+
+      @media (max-width: 480px) {
+        .login-box {
+          width: 90%;
+          margin: 0 auto;
+        }
+      }
+    </style>
+  </section>
+  <script src="./script.js"></script>
+
+  <!-- Bootstrap JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

@@ -133,4 +133,39 @@
 
 
 
+    // Add smooth scrolling behavior
+  document.addEventListener('DOMContentLoaded', () => {
+    document.documentElement.style.scrollBehavior = 'smooth';
+  });
+
+
+
+  const text = "I'm a Full Stack Developer ..";
+  let index = 0;
+  let isDeleting = false;
+  let typingDelay = 100;
+  let erasingDelay = 50;
+  let newTextDelay = 1000;
+  
+  function typeEffect() {
+      const currentText = text.substring(0, index);
+      document.getElementById('typing-text').textContent = currentText;
+  
+      if (!isDeleting && index < text.length) {
+          // Typing
+          index++;
+          setTimeout(typeEffect, typingDelay);
+      } else if (isDeleting && index > 0) {
+          // Erasing
+          index--;
+          setTimeout(typeEffect, erasingDelay);
+      } else {
+          // Change direction
+          isDeleting = !isDeleting;
+          setTimeout(typeEffect, isDeleting ? newTextDelay : typingDelay);
+      }
+  }
+  
+  // Start the typing effect when the page loads
+  window.onload = typeEffect;
     

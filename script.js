@@ -195,3 +195,21 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+
+
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const footerLinks = document.querySelectorAll('.footer-links a');
+            
+            footerLinks.forEach(link => {
+                link.addEventListener('mouseenter', function() {
+                    this.style.color = '#D4AF37';
+                });
+                
+                link.addEventListener('mouseleave', function() {
+                    this.style.color = '#fff';
+                });
+            });
+        });

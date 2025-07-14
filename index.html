@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio - Abdelaziz Aabbour</title>
+  <link rel="icon" href="./pic/creolab.png" type="image/x-icon">
+
   <link rel="stylesheet" href="./styles.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Bootstrap CSS -->
@@ -17,7 +19,7 @@
 
   <nav id="navbar">
     <div class="nav-container">
-      <a href="#" class="logo">
+      <a id="" class="logo">
        Portfolio 
       </a>
       <ul class="nav-links">
@@ -91,7 +93,7 @@
       </svg>
     </div>
   </div>
-</label>
+          </label>
 
         </li>
       </ul>
@@ -128,7 +130,30 @@
           A dedicated developer with expertise in both front-end and back-end technologies.
           I create efficient, scalable applications and enjoy turning complex problems
           into simple, beautiful solutions.
-          <iframe src="cv.html" width="100%" height="500px" style="border: none;"></iframe>
+
+<div class="cv-hint">
+ 
+  <span>Click below to view my CV</span><br>
+  <iframe src="cv.html" width="100%" ></iframe>
+
+</div>
+<style>
+.cv-hint {
+  text-align: center;
+  margin: 20px 0;
+  padding: 10px;
+  border-radius: 5px;
+  color: #ffd700;
+}
+
+.cv-hint i {
+  margin-right: 8px;
+}
+
+.cv-hint span {
+  font-style: italic;
+}
+</style>
         </p>
 
       </div>

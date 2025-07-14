@@ -1396,3 +1396,183 @@ display: block;
     transform: scale(1);
   }
 }
+
+
+/* ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
+/* ||||||||||||||||||||||||switch to white mode|||||||||||||||||||||||  */
+/* ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
+
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background: linear-gradient(135deg, #121212 0%, #1a1a1a 50%, #121212 100%);
+  color: #e0e0e0;
+}
+
+.dark-mode nav {
+  background: rgba(20, 20, 20, 0.9);
+}
+
+.dark-mode nav.scrolled {
+  background: rgba(20, 20, 20, 0.95);
+}
+
+.dark-mode .container {
+  background: #1e1e1e;
+  color: #e0e0e0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.dark-mode .skill-box .title {
+  color: #e0e0e0;
+}
+
+.dark-mode .skill-box .skill-bar {
+  background: #2d2d2d;
+}
+
+.dark-mode .skill-card {
+  background: #2d2d2d;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .skill-card h3 {
+  color: #ffd700;
+}
+
+.dark-mode .skill-card p {
+  color: #b0b0b0;
+}
+
+.dark-mode .skills-title {
+  color: #ffd700;
+}
+
+.dark-mode .skills-presentation {
+  background: #1e1e1e;
+}
+
+.dark-mode .quote-section {
+  background: rgba(255, 215, 0, 0.05);
+  border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.dark-mode .subtitle,
+.dark-mode .description,
+.dark-mode .quote-author {
+  color: #cccccc;
+}
+
+.dark-mode .example-2 .icon-content a {
+  background-color: #2d2d2d;
+  color: #e0e0e0;
+}
+
+.dark-mode .example-2 .icon-content a .filled {
+  background-color: #121212;
+}
+
+/* Dark Mode Toggle Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch #input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #2196f3;
+  transition: 0.4s;
+  z-index: 0;
+  overflow: hidden;
+  border-radius: 34px;
+}
+
+.sun-moon {
+  position: absolute;
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: yellow;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+#input:checked + .slider {
+  background-color: #000;
+}
+
+#input:checked + .slider .sun-moon {
+  transform: translateX(26px);
+  background-color: white;
+  animation: rotate-center 0.6s ease-in-out both;
+}
+
+.moon-dot {
+  opacity: 0;
+  transition: 0.4s;
+  fill: gray;
+}
+
+#input:checked + .slider .sun-moon .moon-dot {
+  opacity: 1;
+}
+
+.stars {
+  transform: translateY(-32px);
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.star {
+  fill: white;
+  position: absolute;
+  transition: 0.4s;
+  animation: star-twinkle 2s infinite;
+}
+
+#input:checked + .slider .stars {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Animations */
+@keyframes rotate-center {
+  0% { transform: translateX(0) rotate(0); }
+  100% { transform: translateX(26px) rotate(360deg); }
+}
+
+@keyframes star-twinkle {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.2); }
+  80% { transform: scale(0.8); }
+  100% { transform: scale(1); }
+}
+
+/* Positionnement du toggle */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+}
+
+@media (max-width: 768px) {
+  .theme-toggle {
+    top: 15px;
+    right: 15px;
+  }
+}

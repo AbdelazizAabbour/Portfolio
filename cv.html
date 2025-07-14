@@ -1,4 +1,7 @@
-<div class="container">
+<script src="https://cdn.tailwindcss.com"></script>
+<body>
+  
+<div style="display: flex; justify-content: center; align-items: center; min-height: 20vh; margin: 0;">
   <label class="label">
     <input type="checkbox" class="input" />
     <span class="circle"
@@ -18,20 +21,25 @@
         ></path>
       </svg>
       <div class="square"></div>
-    </span>
-    <p class="title">Download Cv</p>
+    </span><br>
+    <p class="title">Download </p>
     <p class="title">Open</p>
   </label>
 </div>
+</body>
 
 <style>
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
   .container {
-    padding: 0;
-    margin: 0;
+   
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
-   margin-top: 50px;
   }
 
   .label {
@@ -45,8 +53,10 @@
     transition: all 0.4s ease;
     padding: 5px;
     position: relative;
+    margin: 0;
   }
 
+  /* Rest of the styles remain unchanged */
   .label::before {
     content: "";
     position: absolute;

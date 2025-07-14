@@ -1,4 +1,4 @@
-        window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function() {
             const navbar = document.getElementById('navbar');
             if (window.scrollY > 50) {
                 navbar.classList.add('scrolled');
@@ -213,3 +213,30 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             });
         });
+
+
+
+
+
+
+
+
+
+
+
+/* ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
+/* ||||||||||||||||||||||||switch to white mode|||||||||||||||||||||||  */
+/* ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
+document.getElementById('input').addEventListener('change', function() {
+  if (this.checked) {
+    document.body.classList.add('dark-mode');
+    document.body.classList.remove('white-mode');
+  } else {
+    document.body.classList.add('white-mode');
+    document.body.classList.remove('dark-mode');
+  }
+});
+
+
+
+
